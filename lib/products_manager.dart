@@ -38,13 +38,18 @@ class _ProductsManagerState extends State<ProductsManager> {
           ),
           color: Colors.red,
           onPressed: () {
+            Navigator.of(context).push(
+                new MaterialPageRoute(
+                    builder: (_) => new Products(_products)),
+            );
+
             setState(() {
               _products.add('Advanced food tester');
               print(_products);
             });
           },
         ),
-        Products(_products),
+
 
       ],
     );
