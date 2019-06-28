@@ -1,8 +1,12 @@
+
 import 'package:flutter/material.dart';
 
+
 class ProductsControl extends StatelessWidget{
-  Function addProduct;
+  final Function addProduct;
+
   ProductsControl(this.addProduct);
+
   @override
   Widget build (BuildContext context){
     return Container(
@@ -17,10 +21,18 @@ class ProductsControl extends StatelessWidget{
             ),
             color: Colors.red,
             onPressed: () {
-              addProduct();
+              addProduct({
+                'price': 1000.00,
+                'title': "sweet",
+                'imageUrl': "assets/food.jpg"
+
+              });
             },
           ),
+
+
         ],
       ),
     );}
+
 }

@@ -10,6 +10,6 @@ class HomePage extends StatelessWidget {
             title: Text('first app'),
             backgroundColor: Colors.deepPurpleAccent,
           ),
-          body: ProductsManager('Food Tester'));
+          body: ProductsManager ());
   }
 }
