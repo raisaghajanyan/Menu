@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/products_manager.dart';
+// import 'package:flutter/rendering.dart';
 import 'package:first_app/pages/home.dart';
+import 'package:first_app/products_manager.dart';
+import 'package:first_app/pages/login.dart';
 
-main() {
+void main() {
+  // debugPaintSizeEnabled = true;
+  // debugPaintBaselinesEnabled = true;
+  // debugPaintPointersEnabled = true;
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _MyAppState();
-  }
-}
-
-class _MyAppState extends State<MyApp> {
-  List<String> products = ['Food Tester'];
-
-  build(context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-        home:HomePage()
-
-    );}
-
+      // debugShowMaterialGrid: true,
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.deepOrange,
+          accentColor: Colors.deepPurple),
+      home: LoginPage(),
+    );
+  }
 }

@@ -22,7 +22,7 @@ class ProductPage  extends StatelessWidget{
 
 
           RaisedButton(
-              child:Text('Back'),
+              child:Text('Delete'),
               onPressed:(){
                 Navigator.pop(context);
               }
